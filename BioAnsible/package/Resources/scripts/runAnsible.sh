@@ -48,12 +48,12 @@ fi
 
 cat << EOF >ansible.cfg
 [defaults]
-roles_path = roles/
+roles_path = galaxy-roles/
 log_path=/home/ubuntu/bio-ansible/ansible.log
 EOF
 
-mkdir -p roles
-ansible-galaxy install -r requirements.yml -p roles/
+mkdir -p galaxy-roles
+ansible-galaxy install -r requirements.yml -p galaxy-roles/
 
 sudo ansible-playbook --become-user=root --become -u ubuntu -i "localhost," --connection=local main.yml 2>&1 | tee ansible.out
 # just retry once if exit code is non-zero
