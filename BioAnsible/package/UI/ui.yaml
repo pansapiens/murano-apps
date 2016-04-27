@@ -62,7 +62,7 @@ Forms:
           description: >-
             Select valid image for the application. Image should already be prepared and
             registered in glance. If available, a pre-generated BioAnsible image is recommended
-            to avoid long deployment times.
+            to avoid long (multi-hour) deployment times.
         - name: assignFloatingIP
           type: boolean
           label: Assign Floating IP
