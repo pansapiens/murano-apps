@@ -72,6 +72,7 @@ sudo nohup ansible-playbook --become-user=root --become -u ubuntu -i "localhost,
 # TODO: deal with GATK download - this probably needs to be a post install message in the terminal upon
 #       first login (eg, "please go here, download GATK to tarballs/ then run XXX")
 
+# TODO: it may be preferable to pull these from object store
 if [ ${DOWNLOAD_REFERENCES} -eq 0 ]; then
   # Download databases and reference genomes
   cd scripts
